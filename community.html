@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bryan Dunleavy is deeply committed to giving back in Greenville, SC. Vice President of the Greenville St. Patrick’s Day Parade & Festival, President of the Ancient Order of Hibernians, and proud St. Baldrick’s Foundation supporter.">
+    <title>Community Outreach | Bryan Dunleavy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap');
+        
+        .section-header { font-family: 'Playfair Display', Georgia, serif; letter-spacing: -0.025em; }
+        .nav-link { transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1); }
+        .nav-link:hover { color: #0f4c3a; }
+        .nav-scrolled { box-shadow: 0 1px 0 0 rgba(0,0,0,0.05); background-color: rgba(255,255,255,0.96); backdrop-filter: blur(12px); }
+        
+        .impact-card {
+            transition: all .3s cubic-bezier(0.4,0,0.2,1);
+        }
+        
+        .modal { animation: modalPop .2s ease-out forwards; }
+        @keyframes modalPop {
+            from { opacity: 0; transform: scale(0.96) translateY(10px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        
+        .community-hero {
+            background: linear-gradient(to bottom, rgba(15,76,58,0.38), rgba(15,76,58,0.78));
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-slate-800 bg-[#f8f5f1]">
+    <!-- Navigation -->
+    <nav id="navbar" class="bg-white border-b border-slate-200 sticky top-0 z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 rounded-full bg-[#0f4c3a] flex items-center justify-center">
+                        <span class="text-white font-semibold text-2xl tracking-tighter">BD</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-2xl tracking-tighter">Bryan Dunleavy</div>
+                        <div class="text-[10px] text-slate-500 -mt-1 tracking-[1.5px] font-medium">GREENVILLE, SC</div>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="family.html" class="nav-link">Family</a>
+                    <a href="realtor.html" class="nav-link">Realtor</a>
+                    <a href="community.html" class="nav-link nav-active text-[#0f4c3a] font-semibold">Community</a>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <a href="index.html#contact" class="hidden md:inline-flex px-5 py-2.5 text-sm font-semibold rounded-full bg-[#0f4c3a] text-white hover:bg-[#0a3a2c]">Contact Me</a>
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden border-t bg-white">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-base font-medium">
+                <a href="index.html" class="py-1 text-slate-600">Home</a>
+                <a href="family.html" class="py-1 text-slate-600">Family</a>
+                <a href="realtor.html" class="py-1 text-slate-600">Realtor</a>
+                <a href="community.html" class="py-1 text-[#0f4c3a] font-semibold">Community</a>
+                <div class="pt-3 border-t"><a href="index.html#contact" class="flex w-full justify-center py-3 rounded-full bg-[#0f4c3a] text-white text-sm font-semibold">Get In Touch</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-[78vh] min-h-[500px] flex items-end">
+        <div class="absolute inset-0">
+            <img src="images/4.jpg" alt="Vibrant Greenville South Carolina St. Patrick's Day Parade celebration" class="w-full h-full object-cover">
+            <div class="community-hero absolute inset-0"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl px-6 pb-12">
+            <div class="inline px-4 py-1 rounded-full bg-white/90 text-[#0f4c3a] text-xs tracking-[2px] font-semibold mb-4">GIVING BACK TO THE PLACE I LOVE</div>
+            <h1 class="text-white text-6xl md:text-7xl tracking-tighter font-semibold leading-none">Community<br>is everything.</h1>
+        </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-6 pt-14 pb-12">
+        <div class="max-w-3xl">
+            <p class="text-xl text-slate-600">I’ve been blessed to build a life and career here in the Upstate. That comes with a responsibility to give back. My volunteer work isn’t something I do on the side — it’s core to who I am.</p>
+        </div>
+    </div>
+
+    <!-- Featured Roles -->
+    <section class="max-w-6xl mx-auto px-6 pb-12">
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- St. Patrick's -->
+            <div class="impact-card bg-white rounded-3xl p-8 border">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="text-4xl text-green-700"><i class="fa-solid fa-flag"></i></div>
+                    <div>
+                        <div class="text-xs uppercase tracking-widest font-semibold text-emerald-800">IRISH HERITAGE</div>
+                        <div class="font-semibold text-xl tracking-tight">Greenville St. Patrick’s Day Parade & Festival</div>
+                    </div>
+                </div>
+                <div class="text-sm text-slate-600">
+                    I proudly serve as <span class="font-semibold text-[#0f4c3a]">Vice President and Executive Board Member</span> of the Greenville St. Patrick’s Day Parade & Festival committee. Every March we bring together thousands of people to celebrate Irish culture, heritage, and the incredible spirit of our community.
+                </div>
+                <div class="mt-5 text-xs font-semibold text-emerald-800">One of the largest St. Patrick’s celebrations in the Southeast</div>
+            </div>
+
+            <!-- AOH -->
+            <div class="impact-card bg-white rounded-3xl p-8 border">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="text-4xl text-green-700"><i class="fa-solid fa-users"></i></div>
+                    <div>
+                        <div class="text-xs uppercase tracking-widest font-semibold text-emerald-800">FRATERNAL ORDER</div>
+                        <div class="font-semibold text-xl tracking-tight">Ancient Order of Hibernians</div>
+                    </div>
+                </div>
+                <div class="text-sm text-slate-600">
+                    I serve as <span class="font-semibold text-[#0f4c3a]">President of the Harp & Shamrock Division</span> of the Ancient Order of Hibernians. The AOH is the oldest Catholic fraternal organization in the United States, dedicated to friendship, unity, and true Christian charity.
+                </div>
+                <div class="mt-5 text-xs font-semibold text-emerald-800">Preserving Irish culture and supporting our local community</div>
+            </div>
+
+            <!-- St. Baldrick's -->
+            <div class="impact-card bg-white rounded-3xl p-8 border">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="text-4xl text-green-700"><i class="fa-solid fa-child"></i></div>
+                    <div>
+                        <div class="text-xs uppercase tracking-widest font-semibold text-emerald-800">CHILDHOOD CANCER RESEARCH</div>
+                        <div class="font-semibold text-xl tracking-tight">St. Baldrick’s Foundation</div>
+                    </div>
+                </div>
+                <div class="text-sm text-slate-600">
+                    For several years I have served as a <span class="font-semibold text-[#0f4c3a]">team captain and fundraiser</span> for St. Baldrick’s, shaving my head on live television to raise money and awareness for childhood cancer research. It is one of the most meaningful things I do each year.
+                </div>
+                <div class="mt-5 text-xs font-semibold text-emerald-800">100% of donations go directly to research</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo + Impact -->
+    <section class="bg-white py-14 border-y">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-x-10 gap-y-10 items-center">
+                <div class="lg:col-span-7">
+                    <div class="rounded-2xl overflow-hidden">
+                        <img src="images/7.jpg" alt="Bryan Dunleavy participating in St. Baldrick's childhood cancer fundraiser in Greenville SC" class="w-full object-cover">
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="uppercase text-xs font-semibold tracking-widest text-emerald-800 mb-2">WHY I DO THIS WORK</div>
+                    <h3 class="section-header text-3xl tracking-tighter leading-tight">I believe we have a duty to leave our community better than we found it.</h3>
+                    
+                    <div class="mt-6 space-y-4 text-[15px] text-slate-600">
+                        <p>The same people who buy homes from me, who wave at me on Main Street, and who celebrate Irish heritage with me every March — those are the people I’m here to serve.</p>
+                        <p>Whether it’s raising money for kids fighting cancer or putting on a parade that brings the whole city together, I show up because I care deeply about this place and these people.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery of moments -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+        <div class="mb-8">
+            <div class="text-xs tracking-widest font-semibold text-emerald-800">IN THE COMMUNITY</div>
+            <div class="section-header text-3xl tracking-tighter">Moments of service and celebration</div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="overflow-hidden rounded-2xl aspect-video">
+                <img src="images/4.jpg" alt="Greenville St. Patrick's Day Parade crowd and celebration" class="w-full h-full object-cover gallery-img cursor-pointer" onclick="showLightbox(this)">
+            </div>
+            <div class="overflow-hidden rounded-2xl aspect-video">
+                <img src="images/7.jpg" alt="St. Baldrick's charity event volunteers in Greenville" class="w-full h-full object-cover gallery-img cursor-pointer" onclick="showLightbox(this)">
+            </div>
+            <div class="overflow-hidden rounded-2xl aspect-video">
+                <img src="images/11.jpg" alt="Community gathering and celebration in Upstate South Carolina" class="w-full h-full object-cover gallery-img cursor-pointer" onclick="showLightbox(this)">
+            </div>
+        </div>
+        <p class="text-xs mt-3 text-slate-500 tracking-wider">These images represent the spirit of the events and causes I’m proud to support.</p>
+    </section>
+
+    <!-- Call to action -->
+    <section class="bg-[#0f4c3a] text-white">
+        <div class="max-w-3xl mx-auto px-6 py-16 text-center">
+            <div class="text-white/70 tracking-[3px] text-xs font-semibold mb-3">HOW YOU CAN HELP</div>
+            <h3 class="text-3xl tracking-tighter font-semibold mb-4">There’s always room for more hands and hearts.</h3>
+            <p class="text-lg text-white/80">If you love the Upstate and want to get involved with Irish heritage events, St. Baldrick’s, or other local causes, I’d love to connect you with the right people.</p>
+            
+            <div class="mt-8">
+                <a href="index.html#contact" class="inline-flex bg-white text-[#0f4c3a] px-8 py-4 font-semibold rounded-full hover:bg-amber-50 transition">Reach Out to Get Involved</a>
+            </div>
+            <div class="text-xs text-white/60 mt-6">St. Baldrick’s • Greenville St. Patrick’s Day Parade & Festival • Ancient Order of Hibernians</div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t py-8 text-sm text-slate-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-y-4">
+            <div>© <span id="year"></span> Bryan Dunleavy</div>
+            <div><a href="index.html" class="hover:text-slate-800">Back to Home</a></div>
+            <div class="text-xs">Proud to serve Greenville and the Upstate</div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" onclick="hideLightbox()" class="hidden fixed inset-0 bg-black/90 z-[100] items-center justify-center p-4">
+        <div class="relative max-w-5xl w-full" onclick="event.stopImmediatePropagation()">
+            <button onclick="hideLightbox()" class="absolute -top-4 -right-3 w-9 h-9 bg-white rounded-full flex items-center justify-center shadow">
+                <i class="fa-solid fa-times text-black"></i>
+            </button>
+            <img id="lightbox-img" class="rounded-xl max-h-[85vh] w-full object-contain shadow-2xl" alt="">
+        </div>
+    </div>
+
+    <script>
+        function setupNavbar() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('nav-scrolled', window.scrollY > 30);
+            });
+        }
+
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+
+        function setYear() {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        }
+
+        function showLightbox(el) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = el.src;
+            lb.classList.remove('hidden');
+            lb.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideLightbox() {
+            const lb = document.getElementById('lightbox');
+            lb.classList.add('hidden');
+            lb.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                const lb = document.getElementById('lightbox');
+                if (!lb.classList.contains('hidden')) hideLightbox();
+            }
+        });
+
+        function init() {
+            setupNavbar();
+            setupMobileMenu();
+            setYear();
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
