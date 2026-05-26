@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Family is everything to Bryan Dunleavy. Learn about his life with wife Emily and why family comes first in everything he does.">
+    <title>Family | Bryan Dunleavy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        .section-header { font-family: 'Playfair Display', Georgia, serif; letter-spacing: -0.025em; }
+        
+        .nav-link { transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1); }
+        .nav-link:hover { color: #0f4c3a; }
+        
+        .warm-green { color: #0f4c3a; }
+        
+        .nav-scrolled { box-shadow: 0 1px 0 0 rgba(0,0,0,0.05); background-color: rgba(255,255,255,0.96); backdrop-filter: blur(12px); }
+        
+        .gallery-img {
+            transition: transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .3s ease;
+            cursor: pointer;
+        }
+        .gallery-img:hover { transform: scale(1.025); box-shadow: 0 14px 22px -8px rgb(0 0 0 / 0.18); }
+        
+        .value-card {
+            transition: all .2s ease;
+        }
+        
+        .modal { animation: modalPop .2s ease-out forwards; }
+        @keyframes modalPop {
+            from { opacity: 0; transform: scale(0.96) translateY(12px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        
+        .family-hero {
+            background: linear-gradient(to bottom, rgba(15,76,58,0.35), rgba(15,76,58,0.72));
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-slate-800 bg-[#f8f5f1]">
+    <!-- Navigation -->
+    <nav id="navbar" class="bg-white border-b border-slate-200 sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 rounded-full bg-[#0f4c3a] flex items-center justify-center">
+                        <span class="text-white font-semibold text-2xl tracking-tighter">BD</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-2xl tracking-tighter">Bryan Dunleavy</div>
+                        <div class="text-[10px] text-slate-500 -mt-1 tracking-[1.5px] font-medium">GREENVILLE, SC</div>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="family.html" class="nav-link nav-active text-[#0f4c3a] font-semibold">Family</a>
+                    <a href="realtor.html" class="nav-link">Realtor</a>
+                    <a href="community.html" class="nav-link">Community</a>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <a href="index.html#contact" class="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-full bg-[#0f4c3a] text-white hover:bg-[#0a3a2c] transition-colors">Contact Me</a>
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t bg-white">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-base font-medium">
+                <a href="index.html" class="py-1 text-slate-600">Home</a>
+                <a href="family.html" class="py-1 text-[#0f4c3a] font-semibold">Family</a>
+                <a href="realtor.html" class="py-1 text-slate-600">Realtor</a>
+                <a href="community.html" class="py-1 text-slate-600">Community</a>
+                <div class="pt-3 border-t"><a href="index.html#contact" class="flex w-full items-center justify-center px-6 py-3 rounded-full bg-[#0f4c3a] text-white text-sm font-semibold">Get In Touch</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative h-[82vh] min-h-[520px] flex items-end">
+        <div class="absolute inset-0">
+            <img src="images/3.jpg" alt="Bryan and Emily Dunleavy in the Blue Ridge Mountains of Upstate South Carolina" class="w-full h-full object-cover">
+            <div class="family-hero absolute inset-0"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl px-6 pb-14">
+            <div class="inline-block bg-white/90 backdrop-blur text-[#0f4c3a] text-xs font-semibold tracking-[2px] px-4 py-1 rounded-full mb-5">THE MOST IMPORTANT THING</div>
+            <h1 class="text-white text-6xl md:text-7xl tracking-tighter font-semibold leading-[0.96]">Family is my<br>why.</h1>
+        </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-6 pt-12 pb-20">
+        <!-- Intro -->
+        <div class="max-w-3xl">
+            <p class="text-xl text-slate-600">My wife Emily and I have built a life here in the Upstate that we are incredibly grateful for. Everything else — my career, my volunteer work, the way I treat clients — flows from this foundation.</p>
+        </div>
+
+        <div class="mt-16 grid md:grid-cols-2 gap-x-14 gap-y-14 items-start">
+            <div>
+                <h3 class="font-semibold text-lg tracking-tight mb-3">Emily &amp; Me</h3>
+                <div class="prose prose-slate text-[15px] text-slate-600">
+                    <p>Emily is my best friend, my biggest supporter, and the person who keeps me grounded. Whether we’re hiking the Blue Ridge trails, exploring new restaurants in downtown Greenville, or just enjoying a quiet evening at home, our time together is sacred.</p>
+                    <p>We love this region — the four seasons, the welcoming communities, the way the mountains meet the foothills. It’s the kind of place that makes you want to slow down and savor life.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-8 border">
+                <div class="uppercase tracking-widest text-xs font-semibold text-emerald-700 mb-3">What family means to me</div>
+                <ul class="space-y-4 text-[15px]">
+                    <li class="flex gap-4"><span class="font-semibold text-[#0f4c3a] w-5">01</span> <span>Being fully present — phones down, hearts open</span></li>
+                    <li class="flex gap-4"><span class="font-semibold text-[#0f4c3a] w-5">02</span> <span>Creating traditions that will outlive us</span></li>
+                    <li class="flex gap-4"><span class="font-semibold text-[#0f4c3a] w-5">03</span> <span>Showing up for the people who matter most</span></li>
+                    <li class="flex gap-4"><span class="font-semibold text-[#0f4c3a] w-5">04</span> <span>Choosing experiences over things</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lifestyle Gallery -->
+    <section class="bg-white py-14 border-y">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <div class="uppercase tracking-[2.5px] text-xs font-semibold text-emerald-800">THE UPSTATE LIFE</div>
+                    <div class="section-header text-3xl tracking-tighter">Moments that matter</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="overflow-hidden rounded-2xl aspect-[16/10] md:aspect-auto md:row-span-2">
+                    <img src="images/11.jpg" alt="Outdoor gathering with friends and family in Upstate South Carolina at sunset" 
+                         class="gallery-img w-full h-full object-cover" onclick="showLightbox(this)">
+                </div>
+                <div class="overflow-hidden rounded-2xl aspect-[16/10]">
+                    <img src="images/8.jpg" alt="Cozy family living room in a South Carolina home" 
+                         class="gallery-img w-full h-full object-cover" onclick="showLightbox(this)">
+                </div>
+                <div class="overflow-hidden rounded-2xl aspect-[16/10]">
+                    <img src="images/6.jpg" alt="Beautiful sunrise over the Blue Ridge Mountains in Upstate SC" 
+                         class="gallery-img w-full h-full object-cover" onclick="showLightbox(this)">
+                </div>
+                <div class="overflow-hidden rounded-2xl aspect-[16/10] lg:col-span-2">
+                    <img src="images/3.jpg" alt="Bryan and Emily enjoying the mountains" 
+                         class="gallery-img w-full h-full object-cover" onclick="showLightbox(this)">
+                </div>
+            </div>
+            <p class="text-xs text-slate-500 mt-3 tracking-wider">Click any photo to enlarge • All photography created for this site</p>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="max-w-5xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <div class="text-emerald-800 text-xs tracking-[3px] font-semibold">THE PRINCIPLES WE LIVE BY</div>
+            <h2 class="section-header text-4xl tracking-tighter mt-2">What we stand for as a family</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div class="value-card bg-white p-7 rounded-2xl border">
+                <div class="text-4xl mb-4 text-emerald-900/70"><i class="fa-solid fa-home"></i></div>
+                <div class="font-semibold text-lg mb-2">Home First</div>
+                <p class="text-sm text-slate-600">The most important real estate decision we’ll ever make is how we spend our time inside our own four walls.</p>
+            </div>
+            <div class="value-card bg-white p-7 rounded-2xl border">
+                <div class="text-4xl mb-4 text-emerald-900/70"><i class="fa-solid fa-mountain"></i></div>
+                <div class="font-semibold text-lg mb-2">Adventure Together</div>
+                <p class="text-sm text-slate-600">We explore the waterfalls, lakes, and trails of the Carolinas as often as we can. Life is too short to stay indoors.</p>
+            </div>
+            <div class="value-card bg-white p-7 rounded-2xl border">
+                <div class="text-4xl mb-4 text-emerald-900/70"><i class="fa-solid fa-hands-helping"></i></div>
+                <div class="font-semibold text-lg mb-2">Service as Legacy</div>
+                <p class="text-sm text-slate-600">We teach that giving back is not optional. It’s how we express gratitude for the life we’ve been given.</p>
+            </div>
+            <div class="value-card bg-white p-7 rounded-2xl border">
+                <div class="text-4xl mb-4 text-emerald-900/70"><i class="fa-solid fa-heart"></i></div>
+                <div class="font-semibold text-lg mb-2">Unhurried Presence</div>
+                <p class="text-sm text-slate-600">In a world of constant noise, we intentionally choose slow meals, long conversations, and real connection.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing message -->
+    <section class="max-w-3xl mx-auto px-6 pb-20 text-center">
+        <div class="text-2xl font-light text-slate-600 tracking-tight">
+            “At the end of the day, the houses I help people buy and sell are just backdrops. 
+            The real story is the love and memories that happen inside them.”
+        </div>
+        <div class="mt-6 text-sm font-semibold text-[#0f4c3a]">— Bryan</div>
+    </section>
+
+    <!-- Contact footer -->
+    <div class="bg-[#0f4c3a] py-12 text-white">
+        <div class="max-w-xl mx-auto px-6 text-center">
+            <div class="font-medium mb-2">Want to connect about life in the Upstate or anything else?</div>
+            <a href="index.html#contact" class="inline-flex items-center text-white/90 hover:text-white font-semibold underline decoration-white/30 underline-offset-4">Reach out anytime</a>
+        </div>
+    </div>
+
+    <footer class="bg-white py-8 border-t text-sm text-slate-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-y-3 justify-between items-center">
+            <div>© <span id="year"></span> Bryan Dunleavy</div>
+            <div><a href="index.html" class="hover:text-slate-700">Back to Home</a></div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="hidden fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4" onclick="hideLightbox()">
+        <div class="relative max-w-6xl w-full" onclick="event.stopImmediatePropagation()">
+            <button onclick="hideLightbox()" class="absolute -top-3 -right-3 bg-white text-black w-9 h-9 rounded-full flex items-center justify-center shadow-xl">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            <img id="lightbox-img" class="w-full max-h-[88vh] object-contain rounded-xl shadow-2xl" alt="">
+        </div>
+    </div>
+
+    <script>
+        function setupNavbar() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 30) navbar.classList.add('nav-scrolled');
+                else navbar.classList.remove('nav-scrolled');
+            });
+        }
+
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+
+        function setYear() {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        }
+
+        // Simple lightbox
+        let currentLightbox = null;
+        
+        function showLightbox(imgElement) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = imgElement.src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function hideLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Keyboard support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const lightbox = document.getElementById('lightbox');
+                if (!lightbox.classList.contains('hidden')) hideLightbox();
+            }
+        });
+
+        function init() {
+            setupNavbar();
+            setupMobileMenu();
+            setYear();
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bryan Dunleavy - Trusted Realtor in Greenville, SC and the Upstate. 9+ years experience, 180+ successful transactions, 5.0 star reviews. Let's find your happy place.">
+    <title>Realtor | Bryan Dunleavy — Let's Find Your Happy Place</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        .section-header { font-family: 'Playfair Display', Georgia, serif; letter-spacing: -0.025em; }
+        .nav-link { transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1); }
+        .nav-link:hover { color: #0f4c3a; }
+        .nav-scrolled { box-shadow: 0 1px 0 0 rgba(0,0,0,0.05); background-color: rgba(255,255,255,0.96); backdrop-filter: blur(12px); }
+        
+        .stat { font-variant-numeric: tabular-nums; }
+        
+        .service-card {
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08);
+        }
+        
+        .testimonial {
+            transition: all .3s ease;
+        }
+        
+        .modal { animation: modalPop .2s ease-out forwards; }
+        @keyframes modalPop {
+            from { opacity: 0; transform: scale(0.96) translateY(10px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        
+        .realtor-hero {
+            background: linear-gradient(to bottom, rgba(15,76,58,0.55), rgba(15,76,58,0.78));
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-slate-800 bg-[#f8f5f1]">
+    <!-- Navigation -->
+    <nav id="navbar" class="bg-white border-b border-slate-200 sticky top-0 z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 rounded-full bg-[#0f4c3a] flex items-center justify-center">
+                        <span class="text-white font-semibold text-2xl tracking-tighter">BD</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-2xl tracking-tighter">Bryan Dunleavy</div>
+                        <div class="text-[10px] text-slate-500 -mt-1 tracking-[1.5px] font-medium">GREENVILLE, SC</div>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="family.html" class="nav-link">Family</a>
+                    <a href="realtor.html" class="nav-link nav-active text-[#0f4c3a] font-semibold">Realtor</a>
+                    <a href="community.html" class="nav-link">Community</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <a href="https://bryandunleavy.exprealty.com/" target="_blank" 
+                       class="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full border border-[#0f4c3a] text-[#0f4c3a] hover:bg-[#0f4c3a] hover:text-white transition-colors">
+                        View Listings
+                    </a>
+                    <a href="#contact" class="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-full bg-[#0f4c3a] text-white hover:bg-[#0a3a2c]">
+                        Contact Me
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600" aria-label="Menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t bg-white">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-base font-medium">
+                <a href="index.html" class="py-1 text-slate-600">Home</a>
+                <a href="family.html" class="py-1 text-slate-600">Family</a>
+                <a href="realtor.html" class="py-1 text-[#0f4c3a] font-semibold">Realtor</a>
+                <a href="community.html" class="py-1 text-slate-600">Community</a>
+                <div class="pt-3 border-t flex flex-col gap-3">
+                    <a href="https://bryandunleavy.exprealty.com/" target="_blank" class="text-center py-2.5 rounded-full border text-sm font-semibold">View Current Listings</a>
+                    <a href="#contact" class="text-center py-3 rounded-full bg-[#0f4c3a] text-white text-sm font-semibold">Contact Bryan</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative pt-10 pb-16 bg-white border-b">
+        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-x-8 items-center">
+            <div class="lg:col-span-7">
+                <div class="uppercase text-emerald-800 text-xs tracking-[3px] font-semibold">eXp REALTY • UPSTATE SC</div>
+                <h1 class="section-header text-6xl lg:text-7xl tracking-tighter leading-none mt-3 mb-5">Let's Find Your<br>Happy Place.</h1>
+                <p class="max-w-lg text-xl text-slate-600">Trusted by hundreds of Upstate families. 9+ years helping people buy and sell homes with integrity, expertise, and care.</p>
+                
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#contact" class="inline-flex px-8 py-4 bg-[#0f4c3a] hover:bg-[#0a3a2c] transition text-white font-semibold rounded-full items-center justify-center gap-2">Start the Conversation</a>
+                    <a href="https://bryandunleavy.exprealty.com/" target="_blank" class="inline-flex px-7 py-4 border font-semibold rounded-full items-center justify-center gap-2 hover:bg-slate-50 transition">Browse Active Listings →</a>
+                </div>
+                
+                <div class="flex items-center gap-4 mt-7 text-sm">
+                    <div class="flex text-amber-500"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <div class="text-slate-600 font-medium">5.0 average rating • 180+ transactions</div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-5 mt-10 lg:mt-0">
+                <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-100 aspect-[16/11]">
+                    <img src="images/1.jpg" alt="Bryan Dunleavy - Professional real estate agent in Greenville South Carolina" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="bg-white border-b py-7">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-8 text-center">
+                <div>
+                    <div class="text-5xl font-semibold tracking-tighter stat text-[#0f4c3a]">9+</div>
+                    <div class="uppercase tracking-widest text-xs mt-1 font-semibold text-slate-500">Years Experience</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-semibold tracking-tighter stat text-[#0f4c3a]">180+</div>
+                    <div class="uppercase tracking-widest text-xs mt-1 font-semibold text-slate-500">Homes Sold</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-semibold tracking-tighter stat text-[#0f4c3a]">5.0</div>
+                    <div class="uppercase tracking-widest text-xs mt-1 font-semibold text-slate-500">Average Client Rating</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-semibold tracking-tighter stat text-[#0f4c3a]">12</div>
+                    <div class="uppercase tracking-widest text-xs mt-1 font-semibold text-slate-500">Upstate Counties Served</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About + Bio -->
+    <section class="max-w-5xl mx-auto px-6 pt-16 pb-12">
+        <div class="grid lg:grid-cols-12 gap-x-12 gap-y-10">
+            <div class="lg:col-span-7">
+                <div class="text-xs tracking-[3px] font-semibold text-emerald-800 mb-2">MY APPROACH</div>
+                <h2 class="section-header text-4xl tracking-tighter">I don’t just sell homes.<br>I help people find where they belong.</h2>
+                
+                <div class="prose prose-slate text-[15.2px] mt-6 text-slate-600 space-y-5">
+                    <p>Bryan has a natural passion for real estate and an in-depth understanding of the local market. He is proud to be part of eXp Realty, which offers cutting-edge technology, marketing tools, and training programs that allow him to provide clients with exceptional service.</p>
+                    
+                    <p>He has built a reputation for being honest, reliable, and trustworthy — qualities that have helped him develop a loyal client base and establish himself as a top-rated real estate agent in Upstate South Carolina.</p>
+                    
+                    <p>His career began in 2017. Since then he has helped countless families successfully buy and sell homes across Greenville, Anderson, Spartanburg, Easley, Travelers Rest, Simpsonville, Greer, and surrounding communities.</p>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-5">
+                <div class="bg-white border rounded-2xl p-7 text-sm">
+                    <div class="font-semibold mb-3 text-base">Specialties</div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium">Buyer’s Agent</span>
+                        <span class="px-4 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium">Listing Agent</span>
+                        <span class="px-4 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium">Relocation</span>
+                        <span class="px-4 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium">New Construction</span>
+                        <span class="px-4 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-medium">First-Time Buyers</span>
+                    </div>
+                    
+                    <div class="mt-6 pt-6 border-t">
+                        <div class="text-xs font-semibold tracking-wider mb-2">LICENSED IN</div>
+                        <div class="font-semibold">South Carolina (Realtor #103509)</div>
+                        <div class="text-sm mt-4">Affiliated with <span class="font-semibold">eXp Realty, LLC</span><br>220 N Main St, Suite 542, Greenville, SC 29601</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How I Help -->
+    <section class="bg-white py-16 border-y">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <div class="text-xs tracking-[3px] font-semibold text-emerald-800">HOW I CAN HELP YOU</div>
+                <h3 class="section-header text-3xl tracking-tighter mt-1">Whether you're buying or selling, I'm in your corner</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="service-card bg-[#f8f5f1] p-7 rounded-2xl border">
+                    <i class="fa-solid fa-search text-3xl text-[#0f4c3a]"></i>
+                    <div class="font-semibold mt-6 mb-2 text-xl tracking-tight">For Buyers</div>
+                    <p class="text-sm text-slate-600">Patient guidance from first showing through closing. I listen first, then find homes that actually fit your life — not just your wishlist.</p>
+                </div>
+                <div class="service-card bg-[#f8f5f1] p-7 rounded-2xl border">
+                    <i class="fa-solid fa-home text-3xl text-[#0f4c3a]"></i>
+                    <div class="font-semibold mt-6 mb-2 text-xl tracking-tight">For Sellers</div>
+                    <p class="text-sm text-slate-600">Strategic pricing, professional photography, and powerful marketing through eXp’s platform. I negotiate hard so you walk away with the best outcome.</p>
+                </div>
+                <div class="service-card bg-[#f8f5f1] p-7 rounded-2xl border">
+                    <i class="fa-solid fa-truck text-3xl text-[#0f4c3a]"></i>
+                    <div class="font-semibold mt-6 mb-2 text-xl tracking-tight">Relocation</div>
+                    <p class="text-sm text-slate-600">Moving to (or from) the Upstate? I’ll be your local expert — neighborhoods, schools, builders, and everything in between.</p>
+                </div>
+                <div class="service-card bg-[#f8f5f1] p-7 rounded-2xl border">
+                    <i class="fa-solid fa-hard-hat text-3xl text-[#0f4c3a]"></i>
+                    <div class="font-semibold mt-6 mb-2 text-xl tracking-tight">New Construction</div>
+                    <p class="text-sm text-slate-600">I help buyers navigate builder contracts, incentives, and inspections — and I represent your interests, not the builder’s.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas Served -->
+    <section class="max-w-5xl mx-auto px-6 py-16">
+        <div class="flex flex-col md:flex-row gap-12">
+            <div class="md:w-2/5">
+                <div class="uppercase text-xs font-semibold tracking-widest text-emerald-800">WHERE I WORK</div>
+                <div class="section-header text-3xl tracking-tighter mt-2">The Upstate is home — and I know every corner of it.</div>
+            </div>
+            <div class="md:w-3/5 text-sm">
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2 text-slate-600">
+                    <div>Greenville</div><div>Anderson</div><div>Spartanburg</div>
+                    <div>Easley</div><div>Travelers Rest</div><div>Greer</div>
+                    <div>Simpsonville</div><div>Fountain Inn</div><div>Powdersville</div>
+                    <div>Clemson</div><div>Seneca</div><div>Pendleton</div>
+                    <div>Mauldin</div><div>Taylors</div><div>Boiling Springs</div>
+                </div>
+                <div class="text-xs text-slate-500 mt-5">Plus many more communities across the Western Upstate MLS area.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="bg-white border-y py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-8 flex items-baseline justify-between">
+                <div>
+                    <div class="uppercase text-xs tracking-[2.5px] font-semibold text-emerald-800">REAL STORIES</div>
+                    <div class="section-header text-3xl tracking-tighter">What my clients say about working with me</div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-5">
+                <div class="testimonial bg-[#f8f5f1] p-7 rounded-2xl border">
+                    <div class="flex text-amber-500 mb-4">★★★★★</div>
+                    <p class="text-[15px]">“On impulse we decided to sell our home on a Friday. By Saturday, Bryan had a photographer scheduled and by Sunday it was officially on the market. By Tuesday he had a stack of offers including a top-dollar offer we accepted. He is my GUY.”</p>
+                    <div class="text-sm font-semibold mt-5">— Kitty Fleetwood</div>
+                </div>
+                <div class="testimonial bg-[#f8f5f1] p-7 rounded-2xl border">
+                    <div class="flex text-amber-500 mb-4">★★★★★</div>
+                    <p class="text-[15px]">“This was my first home purchase and I could not have asked for a better realtor. Bryan was patient, responsive, and a strong anchor throughout the whole process. He was very knowledgeable and diligent in all the work, documentation, and negotiations.”</p>
+                    <div class="text-sm font-semibold mt-5">— Matias Girardi</div>
+                </div>
+                <div class="testimonial bg-[#f8f5f1] p-7 rounded-2xl border">
+                    <div class="flex text-amber-500 mb-4">★★★★★</div>
+                    <p class="text-[15px]">“Bryan was excellent and navigated through unforeseen issues promptly and professionally to closing. I have bought and sold real estate for several decades. I have never seen or experienced better, more friendly and professional service from anyone before.”</p>
+                    <div class="text-sm font-semibold mt-5">— Ashby Davis</div>
+                </div>
+                <div class="testimonial bg-[#f8f5f1] p-7 rounded-2xl border">
+                    <div class="flex text-amber-500 mb-4">★★★★★</div>
+                    <p class="text-[15px]">“Bryan helped us with the purchase of a home in the Greenville area. We are very pleased with him and would recommend him to anyone looking for a professional agent. He made the whole process so easy.”</p>
+                    <div class="text-sm font-semibold mt-5">— Jayne Ashe</div>
+                </div>
+            </div>
+            <div class="mt-6 text-xs text-slate-500 text-center">Dozens more 5-star reviews available on Zillow, Realtor.com, and Google.</div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="contact" class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <div class="max-w-xl mx-auto">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-emerald-800">LET’S GET STARTED</div>
+            <h3 class="section-header text-4xl tracking-tighter mt-3">Ready to find your happy place?</h3>
+            <p class="mt-4 text-lg text-slate-600">Call, text, or email me today. I promise a no-pressure conversation and honest answers.</p>
+        </div>
+        
+        <div class="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:8643575375" class="inline-flex justify-center items-center gap-3 bg-[#0f4c3a] hover:bg-[#0a3a2c] text-white px-8 py-4 rounded-full font-semibold text-lg transition">
+                <i class="fa-solid fa-phone"></i> (864) 357-5375
+            </a>
+            <a href="mailto:bryan.dunleavy@exprealty.com" class="inline-flex justify-center items-center gap-3 border-2 border-[#0f4c3a] text-[#0f4c3a] hover:bg-emerald-50 px-8 py-4 rounded-full font-semibold text-lg transition">
+                <i class="fa-solid fa-envelope"></i> Email Bryan
+            </a>
+        </div>
+        
+        <div class="mt-8 text-sm">
+            <a href="https://bryandunleavy.exprealty.com/" target="_blank" class="font-semibold text-[#0f4c3a] hover:underline">bryandunleavy.exprealty.com</a> &nbsp;&nbsp;•&nbsp;&nbsp; 
+            <a href="https://www.zillow.com/profile/bryandunleavy" target="_blank" class="font-semibold text-[#0f4c3a] hover:underline">Zillow Profile</a>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t py-8 text-sm text-slate-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-y-4 items-center">
+            <div>© <span id="year"></span> Bryan Dunleavy. All rights reserved.</div>
+            <div class="flex gap-x-5">
+                <a href="index.html" class="hover:text-slate-700">Home</a>
+                <a href="family.html" class="hover:text-slate-700">Family</a>
+                <a href="community.html" class="hover:text-slate-700">Community</a>
+            </div>
+            <div>eXp Realty, LLC • Greenville, SC</div>
+        </div>
+    </footer>
+
+    <script>
+        function setupNavbar() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('nav-scrolled', window.scrollY > 30);
+            });
+        }
+
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+
+        function setYear() {
+            const el = document.getElementById('year');
+            if (el) el.textContent = new Date().getFullYear();
+        }
+
+        function init() {
+            setupNavbar();
+            setupMobileMenu();
+            setYear();
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

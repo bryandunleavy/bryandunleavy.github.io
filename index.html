@@ -3,40 +3,576 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bryan Dunleavy</title>
+    <meta name="description" content="Bryan Dunleavy | Realtor serving Greenville and the Upstate of South Carolina. Family man, community leader, and trusted real estate professional. Let's find your happy place.">
+    <title>Bryan Dunleavy | Realtor • Family • Community | Greenville, SC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f8f8; color: #333; }
-        header { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/id/1015/1200/600') center/cover; color: white; padding: 80px 20px; text-align: center; }
-        img.headshot { max-width: 280px; border-radius: 50%; border: 4px solid #fff; }
-        nav { background: #006400; padding: 15px; } /* subtle Irish green */
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        section { padding: 40px 20px; max-width: 900px; margin: auto; text-align: center; }
-        h2 { color: #006400; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        :root {
+            --primary: #0f4c3a;
+        }
+        
+        .tail-container {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .nav-link {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #0f4c3a;
+        }
+
+        .section-header {
+            font-family: 'Playfair Display', Georgia, serif;
+            letter-spacing: -0.025em;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(15, 76, 58, 0.45), rgba(15, 76, 58, 0.65));
+        }
+
+        .pillar-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), 
+                        box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .pillar-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .nav-active {
+            color: #0f4c3a;
+            font-weight: 600;
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+        .warm-green {
+            color: #0f4c3a;
+        }
+
+        .accent-gold {
+            color: #b45309;
+        }
+
+        .site-bg {
+            background-color: #f8f5f1;
+        }
+
+        .content-bg {
+            background-color: #ffffff;
+        }
+
+        .gallery-img {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                        box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.15);
+        }
+
+        .modal {
+            animation: modalPop 0.2s ease-out forwards;
+        }
+
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: scale(0.96) translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .nav-scrolled {
+            box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05);
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+        }
+
+        .irish-accent {
+            background: linear-gradient(90deg, #0f4c3a, #166534);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body>
-    <header style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/id/1015/1200/600') center/cover; color: white; padding: 80px 20px; text-align: center;">
-    <img src="https://bryandunleavy.exprealty.com/your-headshot.jpg" alt="Bryan Dunleavy" class="headshot" style="max-width: 280px; border-radius: 50%; border: 4px solid #fff;">
-    <h1>Bryan Dunleavy</h1>
-    <p>Realtor • Community Leader • Greenville, SC</p>
-</header>
-</header>
-  <nav>
-    <a href="#about">About</a> 
-    <a href="volunteer.html">Volunteer</a> 
-    <a href="https://bryandunleavy.exprealty.com/">Real Estate</a> 
-    <a href="#contact">Contact</a>
-</nav>
-    
-    <section id="about">
-    <h2>About Me</h2>
-    <p>Bryan Dunleavy is a dedicated REALTOR® with eXp Realty serving Greenville and the Western Upstate of South Carolina. With 9 years of experience and a natural passion for real estate, he provides honest, reliable service and deep local market knowledge to help clients find their happy place.</p>
-    <p>Bryan is also an active community leader. He serves as Vice President of the Greenville St. Patrick's Day Parade & Festival Committee and President of the Ancient Order of Hibernians – Harp & Shamrock Division. He regularly supports St. Baldrick's Foundation through head-shaving events for childhood cancer research.</p>
-    <p>A proud Greenville resident, Bryan is committed to both professional excellence and giving back to the community he calls home.</p>
-</section>
-    
-    <section id="realestate"><h2>Real Estate</h2><p><a href="https://bryandunleavy.exprealty.com/">eXp Realty – Western Upstate Homes</a></p></section>
-    
-    <section id="contact"><h2>Contact</h2><p>Email: bryan.dunleavy@exprealty.com</p></section>
+<body class="font-sans antialiased text-slate-800 site-bg">
+    <!-- Navigation -->
+    <nav id="navbar" class="bg-white border-b border-slate-200 sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto">
+            <div class="px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <!-- Logo -->
+                    <div class="flex items-center gap-x-3">
+                        <div class="w-10 h-10 rounded-full bg-[#0f4c3a] flex items-center justify-center">
+                            <span class="text-white font-semibold text-2xl tracking-tighter">BD</span>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-2xl tracking-tighter">Bryan Dunleavy</div>
+                            <div class="text-[10px] text-slate-500 -mt-1 tracking-[1.5px] font-medium">GREENVILLE, SC</div>
+                        </div>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                        <a href="index.html" class="nav-link nav-active">Home</a>
+                        <a href="family.html" class="nav-link">Family</a>
+                        <a href="realtor.html" class="nav-link">Realtor</a>
+                        <a href="community.html" class="nav-link">Community</a>
+                    </div>
+
+                    <!-- CTA + Mobile Menu -->
+                    <div class="flex items-center gap-x-4">
+                        <a href="#contact" 
+                           class="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-full bg-[#0f4c3a] text-white hover:bg-[#0a3a2c] transition-colors">
+                            Contact Me
+                        </a>
+                        
+                        <!-- Mobile menu button -->
+                        <button id="mobile-menu-btn"
+                                class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600 hover:text-slate-900"
+                                aria-label="Toggle menu">
+                            <i class="fa-solid fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t bg-white">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-base font-medium">
+                <a href="index.html" class="py-1 text-[#0f4c3a] font-semibold">Home</a>
+                <a href="family.html" class="py-1 text-slate-600 hover:text-[#0f4c3a]">Family</a>
+                <a href="realtor.html" class="py-1 text-slate-600 hover:text-[#0f4c3a]">Realtor</a>
+                <a href="community.html" class="py-1 text-slate-600 hover:text-[#0f4c3a]">Community</a>
+                <div class="pt-3 border-t">
+                    <a href="#contact" 
+                       class="flex w-full items-center justify-center px-6 py-3 rounded-full bg-[#0f4c3a] text-white text-sm font-semibold">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[100dvh] min-h-[620px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="images/1.jpg" alt="Bryan Dunleavy - Professional Realtor in Greenville, South Carolina" 
+                 class="absolute inset-0 w-full h-full object-cover">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+        
+        <div class="relative z-10 px-6 text-center max-w-4xl">
+            <div class="inline-flex items-center gap-2 bg-white/90 backdrop-blur px-4 py-1 rounded-full text-xs tracking-[1.5px] font-semibold text-[#0f4c3a] mb-6">
+                <div class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></div>
+                GREENVILLE, SOUTH CAROLINA
+            </div>
+            
+            <h1 class="text-white text-6xl md:text-7xl font-semibold tracking-tighter leading-none mb-4">
+                Let's Find Your<br>Happy Place
+            </h1>
+            <p class="text-white/90 text-xl md:text-2xl font-light max-w-lg mx-auto mb-10 tracking-tight">
+                Realtor • Husband • Community Leader
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#pillars" 
+                   class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-[#0f4c3a] font-semibold text-lg hover:bg-amber-50 transition-all active:scale-[0.985]">
+                    Explore My Story
+                    <i class="fa-solid fa-arrow-down text-sm"></i>
+                </a>
+                <a href="realtor.html" 
+                   class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/70 hover:bg-white/10 text-white font-semibold text-lg transition-all">
+                    Work With Me
+                </a>
+            </div>
+            
+            <div class="mt-12 text-white/70 text-sm tracking-widest font-medium flex items-center justify-center gap-2">
+                <div class="h-px w-6 bg-white/40"></div>
+                SCROLL TO BEGIN
+                <div class="h-px w-6 bg-white/40"></div>
+            </div>
+        </div>
+
+        <!-- Trust bar -->
+        <div class="absolute bottom-0 left-0 right-0 hidden md:block">
+            <div class="bg-white/95 backdrop-blur border-t border-white/60 py-3.5">
+                <div class="max-w-6xl mx-auto px-6 flex items-center justify-center gap-x-10 text-xs text-slate-600 font-medium tracking-wider">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-star text-amber-500"></i>
+                        <span>5.0 RATING</span>
+                    </div>
+                    <div>180+ TRANSACTIONS</div>
+                    <div>9+ YEARS EXPERIENCE</div>
+                    <div class="hidden lg:block">UPSTATE SC EXPERT</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="max-w-5xl mx-auto px-6 pt-16 pb-20">
+        <div class="max-w-3xl">
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-emerald-800 mb-3">A LITTLE ABOUT ME</div>
+            <h2 class="section-header text-5xl tracking-tighter leading-none text-balance">Born and raised in the Upstate, I help families find where they truly belong.</h2>
+        </div>
+        
+        <div class="mt-10 grid md:grid-cols-12 gap-10 text-[15px] leading-relaxed text-slate-600">
+            <div class="md:col-span-7">
+                <p class="mb-5">For nearly a decade I’ve had the privilege of guiding people through one of the most meaningful decisions of their lives — finding home. Whether you’re moving to Greenville for the first time, upgrading for your growing family, or selling the house that holds decades of memories, I bring local knowledge, calm guidance, and a genuine commitment to your success.</p>
+                <p>I believe real estate is deeply personal. That’s why I treat every client like family — with patience, transparency, and the relentless pursuit of the best outcome.</p>
+            </div>
+            <div class="md:col-span-5 pt-1">
+                <div class="bg-white rounded-2xl p-7 border border-slate-100 shadow-sm">
+                    <div class="font-semibold text-[#0f4c3a] mb-4">What drives me every day</div>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-emerald-600"></i> Deep roots in the Upstate market</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-emerald-600"></i> Honest, pressure-free guidance</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-emerald-600"></i> Technology + old-fashioned service</li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check mt-1 text-emerald-600"></i> Family always comes first</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Three Pillars -->
+    <section id="pillars" class="bg-white py-16 border-y">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <div class="text-emerald-800 text-xs tracking-[3px] font-semibold mb-2">HOW I SHOW UP IN THE WORLD</div>
+                <h3 class="section-header text-4xl tracking-tighter">Three things that matter most</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Family Card -->
+                <a href="family.html" class="pillar-card group block bg-[#f8f5f1] rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-72">
+                        <img src="images/3.jpg" alt="Bryan and Emily enjoying the Blue Ridge Mountains" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-7">
+                            <div class="text-white">
+                                <div class="text-xs tracking-widest font-semibold opacity-75 mb-1">THE FOUNDATION</div>
+                                <div class="text-3xl font-semibold tracking-tighter">Family</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-5 text-sm text-slate-600">
+                        My wife Emily and I believe the best life is one built around the people you love. 
+                        Family shapes everything I do — in business and beyond.
+                    </div>
+                    <div class="px-7 pb-7 text-sm font-semibold text-[#0f4c3a] group-hover:gap-2 flex items-center gap-1 transition-all">
+                        Meet my family <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </div>
+                </a>
+
+                <!-- Realtor Card -->
+                <a href="realtor.html" class="pillar-card group block bg-[#f8f5f1] rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-72">
+                        <img src="images/9.jpg" alt="Bryan helping a family find their dream home in South Carolina" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-7">
+                            <div class="text-white">
+                                <div class="text-xs tracking-widest font-semibold opacity-75 mb-1">MY PROFESSION</div>
+                                <div class="text-3xl font-semibold tracking-tighter">Realtor</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-5 text-sm text-slate-600">
+                        With over 180 transactions and nearly a decade helping Upstate families, 
+                        I bring expertise, integrity, and a true passion for finding your happy place.
+                    </div>
+                    <div class="px-7 pb-7 text-sm font-semibold text-[#0f4c3a] group-hover:gap-2 flex items-center gap-1 transition-all">
+                        Work with me <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </div>
+                </a>
+
+                <!-- Community Card -->
+                <a href="community.html" class="pillar-card group block bg-[#f8f5f1] rounded-3xl overflow-hidden border border-slate-100">
+                    <div class="relative h-72">
+                        <img src="images/4.jpg" alt="Greenville St. Patrick's Day Parade celebration" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-7">
+                            <div class="text-white">
+                                <div class="text-xs tracking-widest font-semibold opacity-75 mb-1">GIVING BACK</div>
+                                <div class="text-3xl font-semibold tracking-tighter">Community</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-7 pt-5 text-sm text-slate-600">
+                        I’m deeply proud to serve as Vice President of the Greenville St. Patrick’s Day Parade &amp; Festival 
+                        and President of the Ancient Order of Hibernians.
+                    </div>
+                    <div class="px-7 pb-7 text-sm font-semibold text-[#0f4c3a] group-hover:gap-2 flex items-center gap-1 transition-all">
+                        See my impact <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="max-w-6xl mx-auto px-6 py-20">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-y-4">
+            <div>
+                <div class="uppercase text-emerald-800 tracking-[2.5px] text-xs font-semibold">REAL VOICES</div>
+                <h3 class="section-header text-4xl tracking-tighter">What clients say</h3>
+            </div>
+            <a href="realtor.html#testimonials" class="text-sm font-semibold text-[#0f4c3a] inline-flex items-center hover:gap-2 transition-all">
+                Read all testimonials <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+            </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="testimonial-card bg-white p-7 rounded-2xl border border-slate-100">
+                <div class="flex text-amber-500 text-sm mb-4">★★★★★</div>
+                <p class="text-[15px] leading-snug text-slate-600">"Bryan was phenomenal. He made sure to keep me updated at every twist and turn. If I ever purchase or sell again, he is my guy!"</p>
+                <div class="mt-5 text-sm font-semibold">— Natasha</div>
+            </div>
+            <div class="testimonial-card bg-white p-7 rounded-2xl border border-slate-100">
+                <div class="flex text-amber-500 text-sm mb-4">★★★★★</div>
+                <p class="text-[15px] leading-snug text-slate-600">"The best agent ever. Brian is so nice. I felt respected. I am 79 years old and if I bought another home, no one but Brian would be my realtor."</p>
+                <div class="mt-5 text-sm font-semibold">— Glynda Davis</div>
+            </div>
+            <div class="testimonial-card bg-white p-7 rounded-2xl border border-slate-100">
+                <div class="flex text-amber-500 text-sm mb-4">★★★★★</div>
+                <p class="text-[15px] leading-snug text-slate-600">"We couldn’t have asked for more from Bryan. We got the assistance we needed at every step of the process and are very happy with our home purchase."</p>
+                <div class="mt-5 text-sm font-semibold">— David Goodwin</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-[#0f4c3a] text-white py-16">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-x-14 gap-y-10 items-center">
+                <!-- Left: Copy + Direct links -->
+                <div>
+                    <div class="uppercase text-xs tracking-[3px] text-white/70 font-semibold mb-3">LET'S CONNECT</div>
+                    <h3 class="text-4xl tracking-tighter font-semibold leading-tight">Ready to talk about your next move?</h3>
+                    <p class="mt-4 text-lg text-white/80">Whether you're buying your first home, selling after 30 years, or simply exploring options in the Upstate — I'm here with honest answers and zero pressure.</p>
+                    
+                    <div class="mt-8 space-y-3 text-sm">
+                        <a href="tel:8643575375" class="flex items-center gap-3 hover:text-white/90 transition">
+                            <i class="fa-solid fa-phone w-5"></i>
+                            <span class="font-semibold">(864) 357-5375</span>
+                        </a>
+                        <a href="mailto:bryan.dunleavy@exprealty.com" class="flex items-center gap-3 hover:text-white/90 transition">
+                            <i class="fa-solid fa-envelope w-5"></i>
+                            <span class="font-semibold">bryan.dunleavy@exprealty.com</span>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-7 text-xs text-white/60 leading-relaxed">
+                        Connect on 
+                        <a href="https://www.linkedin.com/in/bryandunleavyrealtor" target="_blank" class="underline hover:text-white">LinkedIn</a>, 
+                        <a href="https://www.instagram.com/bryandunleavyrealtor/" target="_blank" class="underline hover:text-white">Instagram</a> or 
+                        <a href="https://bryandunleavy.exprealty.com/" target="_blank" class="underline hover:text-white">my professional site</a>.
+                    </div>
+                </div>
+
+                <!-- Right: Simple functional form -->
+                <div class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-8">
+                    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-xs tracking-wider text-white/70 font-medium block mb-1">NAME</label>
+                                <input type="text" name="name" required 
+                                       class="w-full bg-white/90 text-slate-800 placeholder:text-slate-400 border-0 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-white/50">
+                            </div>
+                            <div>
+                                <label class="text-xs tracking-wider text-white/70 font-medium block mb-1">PHONE</label>
+                                <input type="tel" name="phone" required 
+                                       class="w-full bg-white/90 text-slate-800 placeholder:text-slate-400 border-0 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-white/50">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-xs tracking-wider text-white/70 font-medium block mb-1">EMAIL</label>
+                            <input type="email" name="email" required 
+                                   class="w-full bg-white/90 text-slate-800 placeholder:text-slate-400 border-0 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-white/50">
+                        </div>
+                        <div>
+                            <label class="text-xs tracking-wider text-white/70 font-medium block mb-1">HOW CAN I HELP?</label>
+                            <textarea name="message" rows="3" required placeholder="I'm looking to buy in Greer / Selling my home in Greenville / Just have a question..."
+                                      class="w-full bg-white/90 text-slate-800 placeholder:text-slate-400 border-0 rounded-lg px-4 py-3 text-sm resize-y focus:outline-none focus:ring-2 focus:ring-white/50"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full mt-2 inline-flex justify-center items-center gap-2 bg-white hover:bg-amber-50 transition text-[#0f4c3a] font-semibold rounded-full py-3.5 text-sm">
+                            SEND MESSAGE <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        
+                        <p class="text-[10px] text-center text-white/50">This form is ready to connect to Formspree, Netlify Forms, or similar (see README).</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-10">
+        <div class="max-w-6xl mx-auto px-6 text-sm text-slate-500 flex flex-col md:flex-row justify-between gap-y-4">
+            <div>© <span id="year"></span> Bryan Dunleavy. All rights reserved.</div>
+            <div class="flex flex-wrap gap-x-6 gap-y-1">
+                <a href="https://bryandunleavy.exprealty.com/" target="_blank" class="hover:text-slate-800">Professional Site</a>
+                <a href="https://www.zillow.com/profile/bryandunleavy" target="_blank" class="hover:text-slate-800">Zillow</a>
+                <a href="https://www.realtor.com/realestateagents/5e6b6aeb984e4400118fbe7e" target="_blank" class="hover:text-slate-800">Realtor.com</a>
+                <a href="family.html" class="hover:text-slate-800">Family</a>
+                <a href="community.html" class="hover:text-slate-800">Community</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script configuration
+        function initializeTailwind() {
+            document.documentElement.style.setProperty('--accent', '#0f4c3a');
+        }
+
+        // Mobile menu
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+
+            // Close menu when clicking nav links
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        }
+
+        // Navbar scroll effect
+        function setupNavbar() {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 30) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    navbar.classList.remove('nav-scrolled');
+                }
+            });
+        }
+
+        // Current year
+        function setCurrentYear() {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        }
+
+        // Simple smooth scroll for anchor links
+        function setupSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        const navHeight = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Initialize everything
+        function init() {
+            initializeTailwind();
+            setupMobileMenu();
+            setupNavbar();
+            setCurrentYear();
+            setupSmoothScroll();
+            
+            // Easter egg: logo click scrolls to top
+            const logo = document.querySelector('.fa-solid');
+            if (logo) {
+                document.querySelector('nav .flex.items-center').addEventListener('click', (e) => {
+                    if (e.target.closest('.flex.items-center')) {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                });
+            }
+        }
+
+        // Simple form handler (graceful fallback)
+        function handleFormSubmit(e) {
+            const form = e.target;
+            
+            // If user hasn't replaced the Formspree action yet, fall back to mailto
+            if (form.action.includes('your-form-id')) {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const name = formData.get('name') || '';
+                const phone = formData.get('phone') || '';
+                const email = formData.get('email') || '';
+                const message = formData.get('message') || '';
+                
+                const subject = encodeURIComponent(`Website inquiry from ${name}`);
+                const body = encodeURIComponent(
+                    `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\n${message}`
+                );
+                
+                window.location.href = `mailto:bryan.dunleavy@exprealty.com?subject=${subject}&body=${body}`;
+                
+                // Show friendly message
+                const btn = form.querySelector('button[type="submit"]');
+                if (btn) {
+                    const original = btn.innerHTML;
+                    btn.innerHTML = 'Opening your email client...';
+                    setTimeout(() => {
+                        btn.innerHTML = original;
+                        form.reset();
+                    }, 1800);
+                }
+            }
+            // Otherwise let Formspree / Netlify handle it normally
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
 </body>
 </html>
