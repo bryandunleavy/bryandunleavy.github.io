@@ -1,87 +1,73 @@
-# Bryan Dunleavy — Personal Website
+# Bryan Dunleavy — Personal Hub
 
-A warm, modern, professional static website for Bryan Dunleavy, Realtor with eXp Realty in Greenville, South Carolina.
+Canonical static hub for **[bryandunleavy.github.io](https://bryandunleavy.github.io)** with custom domain **[bryandunleavy.com](https://bryandunleavy.com)** (`CNAME` committed in-repo). Pure HTML + Tailwind CDN + Font Awesome — no build step.
 
-**Live sections:**
-- **Home** — Hero, personal introduction, three pillars teaser
-- **Family** — Story with wife Emily, values, lifestyle photography
-- **Realtor** — Full professional bio, stats, services, testimonials, contact CTAs
-- **Community** — St. Patrick’s Day Parade leadership, Ancient Order of Hibernians, St. Baldrick’s Foundation work
+This repo is the source of truth for the personal hub (family, realtor story, community, buy/sell lead forms). Bryan’s eXp listings site remains at [bryandunleavy.exprealty.com](https://bryandunleavy.exprealty.com/).
 
-## Features
-- Beautiful custom photography generated specifically for this site
-- Fully responsive (mobile-first) with elegant mobile menu
-- Accessible keyboard navigation and focus states
-- Image lightbox galleries on Family and Community pages
-- Direct phone/email CTAs throughout
-- Professional yet warm tone reflecting Bryan’s personality and values
-- Zero build step — pure HTML + Tailwind CDN + Font Awesome
+## Pages
 
-## Quick Start (Local Viewing)
+| Page | File | Notes |
+|------|------|--------|
+| Home | `index.html` | Hero, pillars, contact form |
+| Family | `family.html` | Story with Emily, gallery |
+| Realtor | `realtor.html` | Bio, services, testimonials, listings CTAs |
+| Community | `community.html` | Parade, AOH, St. Baldrick’s |
+| Buy | `buy.html` | Buyer intake form (`lead_type=Buyer`) |
+| Sell | `sell.html` | Valuation request (`lead_type=Seller`) |
 
-1. Open the folder in your terminal:
-   ```bash
-   cd bryan-dunleavy-website
-   ```
+Also present: `.nojekyll`, `CNAME` → `bryandunleavy.com`, `images/`.
 
-2. Start a simple local server (recommended):
-   ```bash
-   # Python 3
-   python -m http.server 8000
+## GitHub Pages setup
 
-   # Or Node (if you have `npx`)
-   npx serve .
-   ```
+1. Repo: `bryandunleavy.github.io` (user site) or equivalent with Pages enabled on `main` / root.
+2. Settings → Pages → Source: Deploy from branch `main` / `/ (root)`.
+3. Custom domain: `bryandunleavy.com` (file `CNAME` already set). Point DNS (A/AAAA or CNAME per GitHub docs) and enable HTTPS once DNS verifies.
+4. `.nojekyll` skips Jekyll processing so paths and assets stay as committed.
 
-3. Open http://localhost:8000 in your browser.
+Local preview:
 
-Or simply double-click any `.html` file to preview (some features work best served over http).
+```bash
+cd bryandunleavy.github.io
+python -m http.server 8000
+# open http://localhost:8000
+```
 
-## Deployment Options (Free & Easy)
+## Forms (Formspree)
 
-### Netlify (Recommended)
-1. Drag the entire `bryan-dunleavy-website` folder onto [Netlify Drop](https://app.netlify.com/drop)
-2. Done — instant global CDN + custom domain support
+Buy, Sell, and the Home contact form post to Formspree placeholders:
 
-### Vercel
-1. Import the folder as a new project
-2. No configuration needed
+- Buy / Sell: `https://formspree.io/f/YOUR_FORM_ID`
+- Home: `https://formspree.io/f/your-form-id`
 
-### GitHub Pages
-1. Push the folder to a repo
-2. Enable GitHub Pages on the `main` branch (or `/docs` folder)
-3. Or use a simple GitHub Action
+**Before going live:** create a Formspree form, replace the placeholder ID(s) in the HTML `action` attributes. Until replaced, client-side handlers open a **mailto** draft to `bryan.dunleavy@exprealty.com` so leads are not lost.
 
-### Traditional Hosting
-Upload the folder contents via FTP or file manager to any web host. No server-side code required.
+Hidden fields on funnel pages:
 
-## Customization Notes
+- Buy: `lead_type=Buyer`
+- Sell: `lead_type=Seller`
 
-- **Contact info**: Phone `(864) 357-5375` and `bryan.dunleavy@exprealty.com` appear consistently.
-- **External links**: Update the professional site, Zillow, Instagram, and LinkedIn URLs in the navigation/footer if they ever change.
-- **Images**: All 11 custom images live in `/images/`. Replace them with your own photography anytime (maintain similar dimensions).
-- **Contact Form**: The form on the homepage works out-of-the-box via `mailto:` fallback. For production form handling, replace the `action` URL with a real Formspree (or Netlify Forms) endpoint — takes about 2 minutes. See inline comments in index.html.
+## Images — use real photos before traffic
 
-## Design System
-- Deep forest green (`#0f4c3a`) as primary brand color (nod to Irish heritage without being kitschy)
-- Warm off-white background (`#f8f5f1`)
-- Playfair Display for elegant headlines + Inter system font stack
-- Generous whitespace, rounded 2xl/3xl corners, and tasteful hover states
+`images/` still has placeholder visuals. **Swap in real photography before any public traffic or ads.** Keep similar aspect ratios where possible. Source photos for cropping live under `images/real-photos/` when ready.
 
-## Credits & Thanks
-- Custom imagery generated with xAI Imagine
-- Tailwind CSS via CDN (https://tailwindcss.com)
-- Font Awesome 6 icons
-- Real client testimonials used with permission or paraphrased from public reviews
+## SEO
 
-## Questions?
+**No SEO work yet** — no sitemap, no structured data beyond basic meta descriptions, no Search Console setup in this pass. Add later when content and photos are final.
 
-Reach Bryan directly:
-- **Phone**: (864) 357-5375
-- **Email**: bryan.dunleavy@exprealty.com
-- **Instagram**: [@bryandunleavyrealtor](https://www.instagram.com/bryandunleavyrealtor/)
-- **Professional site**: [bryandunleavy.exprealty.com](https://bryandunleavy.exprealty.com/)
+## Design
+
+- Primary: `#0f4c3a`
+- Background: `#f8f5f1`
+- Type: Playfair Display (headlines) + Inter
+- External listing links on Home, Realtor, Buy, and Sell → https://bryandunleavy.exprealty.com/
+
+## Contact
+
+- Phone: (864) 357-5375
+- Email: bryan.dunleavy@exprealty.com
+- Instagram: [@bryandunleavyrealtor](https://www.instagram.com/bryandunleavyrealtor/)
+- Professional site: [bryandunleavy.exprealty.com](https://bryandunleavy.exprealty.com/)
 
 ---
 
-Built with ❤️ for the Upstate. Let's find your happy place.
+Built for the Upstate. Let’s find your happy place.

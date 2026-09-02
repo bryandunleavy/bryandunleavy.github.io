@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get a realistic home valuation and a marketing plan from Bryan Dunleavy. Sell in Greenville, Travelers Rest, and the Upstate with an agent who protects your net.">
+    <title>Sell Your Home in Greenville &amp; Upstate SC | Free Valuation | Bryan Dunleavy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        .section-header { font-family: 'Playfair Display', Georgia, serif; letter-spacing: -0.025em; }
+        .nav-link { transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1); }
+        .nav-link:hover { color: #0f4c3a; }
+        .nav-scrolled { box-shadow: 0 1px 0 0 rgba(0,0,0,0.05); background-color: rgba(255,255,255,0.96); backdrop-filter: blur(12px); }
+        .sell-hero {
+            background: linear-gradient(to bottom, rgba(15,76,58,0.55), rgba(15,76,58,0.82));
+        }
+        input, select, textarea {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-slate-800 bg-[#f8f5f1]">
+    <!-- Navigation -->
+    <nav id="navbar" class="bg-white border-b border-slate-200 sticky top-0 z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 rounded-full bg-[#0f4c3a] flex items-center justify-center">
+                        <span class="text-white font-semibold text-2xl tracking-tighter">BD</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-2xl tracking-tighter">Bryan Dunleavy</div>
+                        <div class="text-[10px] text-slate-500 -mt-1 tracking-[1.5px] font-medium">GREENVILLE, SC</div>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center gap-x-7 text-sm font-medium">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="family.html" class="nav-link">Family</a>
+                    <a href="realtor.html" class="nav-link">Realtor</a>
+                    <a href="community.html" class="nav-link">Community</a>
+                    <a href="buy.html" class="nav-link">Buy</a>
+                    <a href="sell.html" class="nav-link nav-active text-[#0f4c3a] font-semibold">Sell</a>
+                </div>
+
+                <div class="flex items-center gap-x-3">
+                    <a href="https://bryandunleavy.exprealty.com/" target="_blank" rel="noopener noreferrer"
+                       class="hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-full border border-[#0f4c3a] text-[#0f4c3a] hover:bg-[#0f4c3a] hover:text-white transition-colors">
+                        View Listings
+                    </a>
+                    <a href="index.html#contact" class="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-semibold rounded-full bg-[#0f4c3a] text-white hover:bg-[#0a3a2c]">
+                        Contact Me
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600" aria-label="Toggle menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t bg-white">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-base font-medium">
+                <a href="index.html" class="py-1 text-slate-600">Home</a>
+                <a href="family.html" class="py-1 text-slate-600">Family</a>
+                <a href="realtor.html" class="py-1 text-slate-600">Realtor</a>
+                <a href="community.html" class="py-1 text-slate-600">Community</a>
+                <a href="buy.html" class="py-1 text-slate-600">Buy</a>
+                <a href="sell.html" class="py-1 text-[#0f4c3a] font-semibold">Sell</a>
+                <div class="pt-3 border-t flex flex-col gap-3">
+                    <a href="https://bryandunleavy.exprealty.com/" target="_blank" rel="noopener noreferrer" class="text-center py-2.5 rounded-full border text-sm font-semibold">View Current Listings</a>
+                    <a href="index.html#contact" class="text-center py-3 rounded-full bg-[#0f4c3a] text-white text-sm font-semibold">Contact Bryan</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative bg-[#0f4c3a] text-white py-16 md:py-20 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="images/2.jpg" alt="" class="w-full h-full object-cover" loading="eager">
+            <div class="sell-hero absolute inset-0"></div>
+        </div>
+        <div class="relative z-10 max-w-6xl mx-auto px-6">
+            <div class="uppercase text-emerald-100/90 text-xs tracking-[3px] font-semibold mb-3">HOME VALUATION • UPSTATE SC</div>
+            <h1 class="section-header text-4xl md:text-6xl tracking-tighter leading-none mb-4">What is your home actually worth?</h1>
+            <p class="text-white/85 text-lg md:text-xl max-w-2xl font-light">Not a Zestimate. A local agent’s read on comparable sales, condition, and what buyers will pay in today’s Upstate market.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#seller-form" class="inline-flex px-6 py-3 rounded-full bg-white text-[#0f4c3a] font-semibold text-sm hover:bg-amber-50 transition">Request a valuation</a>
+                <a href="https://bryandunleavy.exprealty.com/" target="_blank" rel="noopener noreferrer" class="inline-flex px-6 py-3 rounded-full border border-white/40 text-white font-semibold text-sm hover:bg-white/10 transition">Professional site →</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+        <div>
+            <h2 class="section-header text-3xl tracking-tight mb-5">Selling with Bryan</h2>
+            <p class="text-slate-600 mb-4">Pricing too high costs you time and often nets less. Pricing too low leaves money on the table. Bryan uses recent comps, your home’s unique features, and current buyer demand — not a one-size formula.</p>
+            <ul class="space-y-3 text-slate-600">
+                <li class="flex gap-2"><span class="text-[#0f4c3a] font-bold">✓</span> Pre-list walkthrough and prep recommendations</li>
+                <li class="flex gap-2"><span class="text-[#0f4c3a] font-bold">✓</span> Professional photos and targeted marketing</li>
+                <li class="flex gap-2"><span class="text-[#0f4c3a] font-bold">✓</span> Negotiation focused on your net proceeds</li>
+                <li class="flex gap-2"><span class="text-[#0f4c3a] font-bold">✓</span> Coordination through inspection, appraisal, and closing</li>
+            </ul>
+            <p class="mt-6 text-sm text-slate-500">The market in 2026 has more inventory than the peak years. Strategy and presentation matter more, not less.</p>
+            <p class="mt-4 text-sm">
+                <a href="https://bryandunleavy.exprealty.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-[#0f4c3a] hover:underline">bryandunleavy.exprealty.com</a>
+                <span class="text-slate-400"> · eXp Realty · SC #103509</span>
+            </p>
+        </div>
+
+        <div id="seller-form" class="bg-white p-8 rounded-3xl border shadow-sm">
+            <h3 class="section-header text-2xl tracking-tight mb-2">Request your complimentary valuation</h3>
+            <p class="text-sm text-slate-500 mb-5">Share a few details and Bryan will follow up with a realistic local read.</p>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                <input type="hidden" name="_subject" value="New Seller Lead — Home Valuation">
+                <input type="hidden" name="lead_type" value="Seller">
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <input required name="name" placeholder="Your name" class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0f4c3a]/40">
+                    <input required type="email" name="email" placeholder="Email" class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0f4c3a]/40">
+                </div>
+                <input type="tel" name="phone" placeholder="Phone" class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0f4c3a]/40">
+                <input required name="address" placeholder="Property address" class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0f4c3a]/40">
+                <div class="grid grid-cols-3 gap-2">
+                    <input name="beds" placeholder="Beds" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0f4c3a]/40">
+                    <input name="baths" placeholder="Baths" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0f4c3a]/40">
+                    <input name="sqft" placeholder="Sq ft (approx)" class="border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0f4c3a]/40">
+                </div>
+                <select name="timeline" class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0f4c3a]/40">
+                    <option value="">When do you want to list?</option>
+                    <option>ASAP</option>
+                    <option>1–3 months</option>
+                    <option>3–6 months</option>
+                    <option>Just curious / planning ahead</option>
+                </select>
+                <select name="condition" class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0f4c3a]/40">
+                    <option value="">Condition</option>
+                    <option>Move-in ready</option>
+                    <option>Some updates needed</option>
+                    <option>Needs work</option>
+                </select>
+                <textarea name="notes" rows="3" placeholder="Anything about the home or your situation?" class="w-full border border-slate-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0f4c3a]/40"></textarea>
+                <button type="submit" class="w-full bg-[#0f4c3a] text-white font-semibold py-3.5 rounded-full hover:bg-[#0a3a2c] transition">Get My Valuation</button>
+            </form>
+            <p class="text-xs text-slate-400 mt-3">Replace <code>YOUR_FORM_ID</code> in the HTML with your Formspree form ID so submissions reach your inbox. Until then, the form falls back to a mailto draft to bryan.dunleavy@exprealty.com.</p>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t py-8 text-sm text-slate-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-y-4 items-center">
+            <div>© <span id="year"></span> Bryan Dunleavy. All rights reserved.</div>
+            <div class="flex flex-wrap gap-x-5 gap-y-1 justify-center">
+                <a href="index.html" class="hover:text-slate-700">Home</a>
+                <a href="buy.html" class="hover:text-slate-700">Buy</a>
+                <a href="https://bryandunleavy.exprealty.com/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-700">Professional Site</a>
+            </div>
+            <div>eXp Realty, LLC • SC #103509 • (864) 357-5375</div>
+        </div>
+    </footer>
+
+    <script>
+        function setupNavbar() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('nav-scrolled', window.scrollY > 30);
+            });
+        }
+        function setupMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+        function setYear() {
+            const el = document.getElementById('year');
+            if (el) el.textContent = new Date().getFullYear();
+        }
+        function handleFormSubmit(e) {
+            const form = e.target;
+            if (form.action.includes('YOUR_FORM_ID') || form.action.includes('your-form-id')) {
+                e.preventDefault();
+                const fd = new FormData(form);
+                const lines = [];
+                for (const [k, v] of fd.entries()) {
+                    if (k.startsWith('_')) continue;
+                    lines.push(`${k}: ${v}`);
+                }
+                const subject = encodeURIComponent('New Seller Lead — Home Valuation');
+                const body = encodeURIComponent(lines.join('\n'));
+                window.location.href = `mailto:bryan.dunleavy@exprealty.com?subject=${subject}&body=${body}`;
+                const btn = form.querySelector('button[type="submit"]');
+                if (btn) {
+                    const original = btn.innerHTML;
+                    btn.innerHTML = 'Opening your email client...';
+                    setTimeout(() => { btn.innerHTML = original; form.reset(); }, 1800);
+                }
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            setupNavbar();
+            setupMobileMenu();
+            setYear();
+        });
+    </script>
+</body>
+</html>
